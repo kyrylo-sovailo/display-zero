@@ -1,0 +1,33 @@
+# C++ compiler #
+################
+*.lib
+*.obj
+*.dll
+*.exe
+*.o
+*.a
+*.so
+*.out
+
+# OS #
+######
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio #
+#################
+*.SLN
+*VCXPROJ*
+**/.vs/
+**/Debug/
+**/Release/
+**/x64/
+
+# CMake #
+#########
+build
