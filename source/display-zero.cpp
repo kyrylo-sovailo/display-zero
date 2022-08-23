@@ -110,7 +110,13 @@ int process(const char *input, const char *output)
 
 int help()
 {
-    std::cout << "Help?" << std::endl;
+    std::cout << "display-zero is an utility that displays images and videos using display-zero library" << std::endl;
+    std::cout << "Usage:" << std::endl;
+    #ifdef LIBDISPLAY_ZERO
+    std::cout << "    ./display-zero <OUTPUT> -t <PERIOD>   - display processed file file with given period (if video)" << std::endl;
+    #endif
+    std::cout << "    ./display-zero -p <INPUT> -o <OUTPUT> - process file" << std::endl;
+    std::cout << "    ./display-zero -h                     - print help" << std::endl;
     return 0;
 }
 
@@ -128,7 +134,7 @@ int _main(int argc, char **argv)
         {
             if (strcmp(argv[i], "-o") == 0 || strcmp(argv[i], "--output") == 0)
                 { if (output != nullptr) throw std::runtime_error("_main(): repeated -o option"); next_output = true; }
-	    else if (strcmp(argv[i], "-t") == 0 || strcmp(argv[i], "--time") == 0)
+	        else if (strcmp(argv[i], "-t") == 0 || strcmp(argv[i], "--time") == 0)
                 { if (period > 0) throw std::runtime_error("_main(): repeated -t option"); next_period = true; }
             else if (strcmp(argv[i], "-p") == 0 || strcmp(argv[i], "--process") == 0)
                 { if (operation != nullptr) throw std::runtime_error("_main(): repeated operation option"); operation = "-p"; }
