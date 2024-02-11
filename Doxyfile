@@ -1,0 +1,14 @@
+PROJECT_NAME           = "Devtemplate"
+PROJECT_BRIEF          = "Example C++ library"
+FILE_PATTERNS          = *.h
+INPUT                  = include
+OUTPUT_DIRECTORY       = documentation
+RECURSIVE              = YES
+
+GENERATE_DOCBOOK       = NO
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+GENERATE_XML           = NO
+NUM_PROC_THREADS       = 0
